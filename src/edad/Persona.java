@@ -2,10 +2,9 @@ package edad;
 
 public class Persona {
 
-    private String nombre;
     public int i, j, k;//FECHA: DIA/MES/AÃ‘O
-    private final int aÃ±oActual = 2014;
-    private int aÃ±os, dias, semanas, meses, horas, minutos, segundos;
+    private final int datoActual = 2017;
+    private int datos, dias, semanas, meses, horas, minutos, segundos;
 
     //constructor
     public Persona() {
@@ -13,7 +12,6 @@ public class Persona {
     }
 
     public Persona(String a) {
-        nombre = a;
     }
 
     //metodos
@@ -25,22 +23,34 @@ public class Persona {
     */
     
     public void fechaNacimiento(int d, int m, int a) {
-        this.i = d;
+       
+    	//comando do desenvolvedor para lançar uma Exception
+    	if(d<0) {  
+			throw new IllegalArgumentException("O dia é negativo");
+		}
+		if(m<0) {
+			throw new IllegalArgumentException("O mês é negativo");
+		}
+		if(a<0) {
+			throw new IllegalArgumentException("O ano é negativo"); 
+		}
+
+    	this.i = d;
         this.j = m;
         this.k = a;
     }
 
     public void tieneEdad() {
-        aÃ±os = aÃ±oActual - k;
+        datos = datoActual - k;
     }
 
     public int getTieneEdad() {
-        System.out.println("Tienes " + aÃ±os + " aÃ±os.");
-        return aÃ±os;
+        System.out.println("Tienes " + datos + " anos.");
+        return datos;
     }
 
     public void calculos() {
-        dias = aÃ±os * 365;
+        dias = datos * 365;
         semanas = dias / 7;
         meses = dias / 30;
         horas = dias * 24;
