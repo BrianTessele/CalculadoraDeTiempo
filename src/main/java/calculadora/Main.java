@@ -1,8 +1,8 @@
-package edad;
+package calculadora;
 
 import java.util.Scanner;
 
-public class Edad {
+public class Main {
 
     public static void main(String[] args) {
         // TODO code application logic here.
@@ -12,18 +12,18 @@ public class Edad {
 
         System.out.println("Nombre: ");
         Persona calculosPersona1 = new Persona(dato.nextLine());
-
+        
         //condicion.
         /*
-        * Se ha de cumplir que el añoActual sea 2015
-        * en caso contrario debera pedirse insertar año.
-        * El programa entonces calculara con el nuevo año.
+        * Se ha de cumplir que el datoActual sea 2017
+        * en caso contrario debera pedirse insertar ano.
+        * El programa entonces calculara con el nuevo ano.
         */
         //fin condicion.
         
         System.out.println("Fecha de Nacimiento: ");
-        calculosPersona1.fechaNacimiento(dato.nextInt(), dato.nextInt(), dato.nextInt());
-
+        Persona.fechaNacimiento(dato.nextInt(), dato.nextInt(), dato.nextInt());
+        dato.close();
         calculosPersona1.tieneEdad();
         calculosPersona1.getTieneEdad();
         calculosPersona1.calculos();
@@ -34,4 +34,3 @@ public class Edad {
     }
 
 }
-
