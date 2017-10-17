@@ -45,8 +45,8 @@ public class Persona {
     }
     	
 
-    public void tieneEdad() {
-        anos = datoActual - k;
+    public double tieneEdad() {
+        return anos = datoActual - k;
     }
 
     public int getTieneEdad() {
